@@ -136,13 +136,15 @@ document.querySelector('.aniversarios').addEventListener('click', function(infos
             let dado = infosDoEvento.target;
             let sim = dado.classList.contains('sim')
             let nao = dado.classList.contains('nao')
-            console.log(sim, nao)
+            infosDoEvento.preventDefault()
 
             if(sim){
+                infosDoEvento.preventDefault()
                 pessoas.removeData(informacoes)
                 $excluir.classList.add('remove-excluir')
             }
             else if(nao){
+                infosDoEvento.preventDefault()
                 $excluir.classList.add('remove-excluir')
             }
             else{
